@@ -1,5 +1,5 @@
 import { render, fireEvent, screen, cleanup } from '@testing-library/react';
-import HomePage from './HomePage';
+import HomePage from './HomePage-v1';
 
 describe('Homepage -', () => {
   it('Check Getting started hyperlink to be clickable', () => {

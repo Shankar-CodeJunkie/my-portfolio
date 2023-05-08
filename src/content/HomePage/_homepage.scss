@@ -4,68 +4,155 @@
 @use '@carbon/react/scss/theme' as *;
 @use './mixins.scss' as *;
 @use './overrides.scss';
+@use '@carbon/colors';
+@import '@carbon/colors/scss/colors';
 
-.landing-page__illo {
+
+
+
+.author-name{
   max-width: 100%;
+  height: auto;
 }
 
-.landing-page__banner {
+.description {
+  background-color: $layer
+}
+
+.landing-page__background {
   padding-top: $spacing-05;
   padding-bottom: $spacing-07 * 4;
   padding-left: $spacing-06;
-  @include landing-page-background;
+  background-color: $background
+ // @include landing-page-background;
 }
 
 .landing-page__heading {
-  @include type-style('productive-heading-05');
+  @include type-style('heading-05')
 }
 
-.landing-page__r2 {
-  margin-top: rem(-40px);
+.landing-page__designation {
+  padding-top: $spacing-05;
+  color: colors.$red-50;
+  @include type-style('heading-03')
 }
 
-.tabs-group-content {
-  padding: $spacing-10 $spacing-06;
-}
+.landing-page__description {
+  border-radius: 5vh;
+  vertical-align : bottom;
+  background-image: linear-gradient(134deg, rgb(5, 64, 200) 0%, rgb(138, 63, 252) 100%);
+  color: #fff;
+  @include type-style('body-02');
+  @media (min-width:640px) {
 
-.landing-page__subheading {
-  @include type-style('productive-heading-03');
-
-  font-weight: 600;
-}
-
-.landing-page__p {
-  @include type-style('productive-heading-03');
-
-  margin-top: $spacing-06;
-  margin-bottom: $spacing-08;
-
-  @include breakpoint-between((320px + 1), md) {
-    max-width: 75%;
   }
 }
 
-.landing-page__r3 {
-  padding: $spacing-09 $spacing-06;
-  @include landing-page-background;
+.skill-layout {
+  background: linear-gradient(134deg, rgb(5, 64, 200) 0%, rgb(138, 63, 252) 100%);
+  max-width: 100%;
+  height: auto;
+  padding: 2vh;
 }
 
-.landing-page__label {
-  @include type-style('heading-01');
+.skill-tile {
+  margin: 1vh;
 }
 
-.tabs-group {
-  background-color: $layer-01;
+.tile-header {
+  @include type-style('heading-05');
+  color: colors.$white-0;
+  margin: 10vh;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
-.landing-page__banner,
-.landing-page__r2,
-.landing-page__r3 {
-  margin-right: -20px;
-  margin-left: -20px;
+.tile-headerv1 {
+  @include type-style('heading-04');
+}
 
-  @include breakpoint-down(md) {
-    margin-right: 0;
-    margin-left: 0;
+.tile-body {
+  @include type-style('body-compact-02');
+}
+
+.test {
+  padding-left: $spacing-06;
+}
+
+@media (min-width: 640px){
+  .ds-heading-md-3 {
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 600;
   }
 }
+
+
+@media screen and (max-width: 500px) {
+  body {
+    transform: scale(0.75);
+  }
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+  animation: image-animation 10s linear;
+}
+
+.pattern {
+  width: 240px;
+  height: 240px;
+  margin: 20px;
+  flex: 0 0 auto;
+}
+
+
+
+@keyframes image-animation {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 25px;
+
+  }
+}
+
+
+
+.dotted-line:after{
+  content: "";
+  border-left: 4px dotted grey;
+  height: auto;
+  margin: auto;
+  //height: 100%;
+}
+
+.experience-tile {
+  //max-width: 100%;
+  height: auto;
+  padding: 2vh;
+}
+
+.experience-layout {
+  margin: 15px
+}
+.experience-header {
+  @include type-style('heading-05');
+  color:  var(--cds-text-primary, #161616);
+  margin: 10vh;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.center {
+  text-align: center;
+}
+
+
+

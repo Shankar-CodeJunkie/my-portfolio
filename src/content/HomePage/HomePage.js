@@ -1,117 +1,188 @@
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Button,
-  Tabs,
-  Tab,
-  TabList,
-  TabPanels,
-  TabPanel,
   Grid,
   Column,
+  Tile, Tag
 } from '@carbon/react';
 import { InfoSection, InfoCard } from '../../components/Info';
-import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
+import { Globe, Application, PersonFavorite, Enterprise } from '@carbon/react/icons';
+import images2 from './../../images/images2.png'
+import {CardHeader} from "@carbon/ibm-products/lib/components/Card";
+import {ListItem, UnorderedList} from "@carbon/ibm-security";
+import developer from './../../images/developer.svg'
+import Timeline from "../../components/Timeline";
+import TimeLine from "../TimeLine/TimeLine";
 
 const HomePage = () => {
   return (
-    <>
-      <Grid className="landing-page" fullWidth>
-        <Column lg={16} md={8} sm={4} className="landing-page__banner">
-          <Breadcrumb noTrailingSlash aria-label="Page navigation">
-            <BreadcrumbItem data-testid="modal">
-              <a href="/">Getting started</a>
-            </BreadcrumbItem>
-          </Breadcrumb>
-          <h1 className="landing-page__heading">
-            Design &amp; build with Carbon
-          </h1>
-        </Column>
-        <Column lg={16} md={8} sm={4} className="landing-page__r2">
-          <Tabs defaultSelectedIndex={0}>
-            <TabList className="tabs-group" aria-label="Tab navigation">
-              <Tab>About</Tab>
-              <Tab>Design</Tab>
-              <Tab>Develop</Tab>
-            </TabList>
-            <TabPanels>
-              <TabPanel>
-                <Grid className="tabs-group-content">
-                  <Column
-                    md={4}
-                    lg={7}
-                    sm={4}
-                    className="landing-page__tab-content">
-                    <h2 className="landing-page__subheading">
-                      What is Carbon?
-                    </h2>
-                    <p className="landing-page__p">
-                      Carbon is IBM’s open-source design system for digital
-                      products and experiences. With the IBM Design Language as
-                      its foundation, the system consists of working code,
-                      design tools and resources, human interface guidelines,
-                      and a vibrant community of contributors.
-                    </p>
-                    <Button>Learn more</Button>
-                  </Column>
-                  <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
-                    <img
-                      className="landing-page__illo"
-                      src={process.env.PUBLIC_URL + '/tab-illo.png'}
-                      alt="Carbon illustration"
-                    />
-                  </Column>
-                </Grid>
-              </TabPanel>
-              <TabPanel>
-                <Grid className="tabs-group-content">
-                  <Column
-                    lg={16}
-                    md={8}
-                    sm={4}
-                    className="landing-page__tab-content">
-                    Rapidly build beautiful and accessible experiences. The
-                    Carbon kit contains all resources you need to get started.
-                  </Column>
-                </Grid>
-              </TabPanel>
-              <TabPanel>
-                <Grid className="tabs-group-content">
-                  <Column
-                    lg={16}
-                    md={8}
-                    sm={4}
-                    className="landing-page__tab-content">
-                    Carbon provides styles and components in Vanilla, React,
-                    Angular, and Vue for anyone building on the web.
-                  </Column>
-                </Grid>
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
-        </Column>
-        <Column lg={16} md={8} sm={4} className="landing-page__r3">
-          <InfoSection heading="The Principles">
-            <InfoCard
-              heading="Carbon is Open"
-              body="It's a distributed effort, guided by the principles of the open-source movement. Carbon's users are also it's makers, and everyone is encouraged to contribute."
-              icon={() => <PersonFavorite size={32} />}
-            />
-            <InfoCard
-              heading="Carbon is Modular"
-              body="Carbon's modularity ensures maximum flexibility in execution. It's components are designed to work seamlessly with each other, in whichever combination suits the needs of the user."
-              icon={() => <Application size={32} />}
-            />
-            <InfoCard
-              heading="Carbon is Consistent"
-              body="Based on the comprehensive IBM Design Language, every element and component of Carbon was designed from the ground up to work elegantly together to ensure consistent, cohesive user experiences."
-              icon={() => <Globe size={32} />}
-            />
-          </InfoSection>
-        </Column>
-      </Grid>
-    </>
-  );
+        <>
+          <Grid className="landing-page" fullWidth  className={'landing-page__background'}>
+
+            <Column lg={8} md={8} sm={4} style={{paddingTop: '50px'}}   >
+
+              <p>Hello, I am </p>
+
+              <div className={'ds-heading-md-3'} >Shankar Venkatachalam</div>
+
+              <div className={'landing-page__designation'}>Software Engineer |  Fullstack Developer</div>
+
+              <Tile style={{ marginRight: '20px', marginTop: '40px'}} className={'landing-page__description'}>
+                I'm a passionate full stack developer, specialized in React (Frontend) and several javascript frameworks
+                for backend. I also like to contribute to open source development and active contributor to
+                many open source development projects.
+              </Tile>
+
+            </Column>
+
+            <Column lg={6} md={8} sm={4}>
+              <img className={'responsive'} src={developer} alt={'fj'}/>
+
+            </Column>
+
+            <Column lg={16} md={8} sm={4} className={'skill-layout'} >
+              <Grid>
+                <Column lg={3} md={8} sm={4}>
+                  <div className={'tile-header'}>
+                    Skills
+
+                  </div>
+                </Column>
+                <Column lg={4} md={8} sm={4}>
+                  <Tile className={'skill-tile'}>
+                    <div className={'tile-headerv1'}>
+                      FrontEnd
+                    </div>
+
+                    <hr/>
+
+                    <div className={'tile-body'}>
+                      <ul>
+                        <li>
+                          Javascript
+                        </li>
+                        <li>
+                          Typecript
+                        </li>
+                        <li>
+                          React
+                        </li>
+                        <li>
+                          NextJS
+                        </li>
+                      </ul>
+                    </div>
+
+                  </Tile>
+
+                </Column>
+                <Column lg={4} md={8} sm={4}>
+                  <Tile className={'skill-tile'}>
+                    <div className={'tile-headerv1'}>
+                      BackEnd
+                    </div>
+                    <hr />
+
+                    <div className={'tile-body'}>
+                      <ul>
+                        <li>
+                          NodeJS
+                        </li>
+                        <li>
+                          ExpressJS
+                        </li>
+                        <li>
+                          MongoDB
+                        </li>
+                        <br />
+
+                      </ul>
+
+                    </div>
+
+                  </Tile>
+
+                </Column>
+                <Column lg={4} md={8} sm={4}>
+                  <Tile className={'skill-tile'}>
+                    <div className={'tile-headerv1'}>
+                      Cloud / CI-CD
+                    </div>
+                    <hr />
+                    <div className={'tile-body'}>
+                        <ul>
+                          <li>IBM Cloud</li>
+                          <li>IBM CodeEngine </li>
+                          <li>IBM Cloud Functions (serverless)</li>
+                          <li>Heroku</li>
+                          <li>Docker | kubernetes | Tekton | Travis </li>
+                        </ul>
+                    </div>
+
+                  </Tile>
+
+                </Column>
+
+              </Grid>
+            </Column>
+
+
+            <Column lg={16} md={8} sm={4} className={'experience-layout'}>
+
+              <Grid>
+                <Column lg={3} md={8} sm={4}>
+                  <div className={'experience-header'}>
+                    Experience
+                  </div>
+                </Column>
+
+                <Column lg={12} md={8} sm={4}>
+                  {
+                    /**
+                     * <div className={'dotted-line center'}>
+
+                     <div><Enterprise /></div>
+
+                     </div>
+                     <div className={'dotted-line center'}>
+
+                     <div><Enterprise /></div>
+
+                     </div>
+                     <Timeline />
+                     */
+                    <TimeLine />
+                  }
+
+
+                </Column>
+              </Grid>
+
+
+
+
+            </Column>
+
+
+
+          </Grid>
+        </>
+  )
 };
 
-export default HomePage;
+
+const SplitText = (props) => {
+  return (
+      <>
+        {props.copy.split("").map(function(char, index){
+          const style = {"animationDelay": (0.5 + index / 10) + "s"};
+          return <span
+              aria-hidden="true"
+              key={index}
+              style={style}>
+        {char}
+    </span>;
+        })}
+      </>
+  )
+}
+
+export default HomePage

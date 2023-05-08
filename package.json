@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.4",
+    "@carbon/ibm-cloud-cognitive-cdai": "^1.24.4",
+    "@carbon/ibm-products": "^1.49.0",
+    "@carbon/ibm-security": "^2.13.17",
     "@carbon/react": "^1.20.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.0.0",
@@ -12,6 +15,7 @@
     "react-dom": "17.0.1",
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.0",
+    "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.57.1",
     "web-vitals": "^2.1.4"
   },

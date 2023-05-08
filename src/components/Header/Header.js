@@ -13,8 +13,8 @@ const AppHeader = (props) => {
   return (
     <Header aria-label="IBM Platform Name">
       <div>
-        <HeaderName href="#" prefix="IBM">
-          [Platform]
+        <HeaderName href="#" prefix="">
+          SHANKAR
         </HeaderName>
       </div>
 
