@@ -1,7 +1,7 @@
 import {
   Grid,
   Column,
-  Tile, Tag
+  Tile, Tag,
 } from '@carbon/react';
 import { InfoSection, InfoCard } from '../../components/Info';
 import { Globe, Application, PersonFavorite, Enterprise } from '@carbon/react/icons';
@@ -55,20 +55,12 @@ const HomePage = () => {
                     <hr/>
 
                     <div className={'tile-body'}>
-                      <ul>
-                        <li>
-                          Javascript
-                        </li>
-                        <li>
-                          Typecript
-                        </li>
-                        <li>
-                          React
-                        </li>
-                        <li>
-                          NextJS
-                        </li>
-                      </ul>
+                      <Tag type="red" title="Clear Filter"> Javascript </Tag>
+                      <Tag type="red" title="Clear Filter"> Typescript </Tag>
+                      <Tag type="red" title="Clear Filter"> React </Tag>
+                      <Tag type="red" title="Clear Filter"> NextJS </Tag>
+                      <br />
+                      <br />
                     </div>
 
                   </Tile>
@@ -82,19 +74,11 @@ const HomePage = () => {
                     <hr />
 
                     <div className={'tile-body'}>
-                      <ul>
-                        <li>
-                          NodeJS
-                        </li>
-                        <li>
-                          ExpressJS
-                        </li>
-                        <li>
-                          MongoDB
-                        </li>
-                        <br />
-
-                      </ul>
+                      <Tag type="red" title="Clear Filter"> NodeJS </Tag>
+                      <Tag type="red" title="Clear Filter"> ExpressJS </Tag>
+                      <Tag type="red" title="Clear Filter"> MongoDB </Tag>
+                      <br />
+                      <br />
 
                     </div>
 
@@ -108,13 +92,12 @@ const HomePage = () => {
                     </div>
                     <hr />
                     <div className={'tile-body'}>
-                        <ul>
-                          <li>IBM Cloud</li>
-                          <li>IBM CodeEngine </li>
-                          <li>IBM Cloud Functions (serverless)</li>
-                          <li>Heroku</li>
-                          <li>Docker | kubernetes | Tekton | Travis </li>
-                        </ul>
+
+                      <Tag type="red" title="Clear Filter"> IBM Cloud </Tag>
+                      <Tag type="red" title="Clear Filter"> IBM CodeEngine</Tag>
+                      <Tag type="red" title="Clear Filter"> IBM Cloud Functions </Tag>
+                      <Tag type="red" title="Clear Filter"> Heroku </Tag>
+                      <Tag type="red" title="Clear Filter"> Docker | kubernetes | Tekton | Travis </Tag>
                     </div>
 
                   </Tile>

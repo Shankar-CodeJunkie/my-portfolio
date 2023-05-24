@@ -19,8 +19,6 @@ const AppHeader = (props) => {
       </div>
 
       <HeaderNavigation aria-label="IBM [Platform]">
-        <HeaderMenuItem href="/">Home</HeaderMenuItem>
-        <HeaderMenuItem href="/repopage">RepoPage</HeaderMenuItem>
       </HeaderNavigation>
       <HeaderGlobalBar>
         <div className={'bx--cloud-header-list'}>
