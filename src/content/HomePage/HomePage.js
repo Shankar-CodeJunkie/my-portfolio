@@ -11,6 +11,7 @@ import {ListItem, UnorderedList} from "@carbon/ibm-security";
 import developer from './../../images/developer.svg'
 import Timeline from "../../components/Timeline";
 import TimeLine from "../TimeLine/TimeLine";
+import ContributionGraph from '../ContributionGraph/ContributionGraph';
 
 const HomePage = () => {
   return (
@@ -142,6 +143,20 @@ const HomePage = () => {
 
 
 
+            </Column>
+
+            <Column lg={16} md={8} sm={4} className={'experience-layout'}>
+              <Grid>
+                <Column lg={3} md={8} sm={4}>
+                <div className={'experience-header'}>
+                    OpenSource Contributions
+                  </div>
+                </Column>
+                <Column lg={12} md={8} sm={4}>
+                  <ContributionGraph />
+                
+                </Column>
+              </Grid>
             </Column>
 
 
