@@ -8,8 +8,6 @@
 @import '@carbon/colors/scss/colors';
 
 
-
-
 .author-name{
   max-width: 100%;
   height: auto;
@@ -49,19 +47,31 @@
 }
 
 .skill-layout {
-  background: linear-gradient(134deg, rgb(5, 64, 200) 0%, rgb(138, 63, 252) 100%);
+  //background: linear-gradient(134deg, rgb(5, 64, 200) 0%, rgb(138, 63, 252) 100%);
   max-width: 100%;
   height: auto;
   padding: 2vh;
+  //z-index: 0;
+  width: 100%;
 }
 
 .skill-tile {
   margin: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 1rem;
+  margin: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: var(--cds-layer, #161616);
+  position: relative;
 }
 
 .tile-header {
   @include type-style('heading-05');
-  color: colors.$white-0;
+  color: colors.$black;
   margin: 10vh;
   background: transparent;
   justify-content: center;
@@ -70,7 +80,7 @@
 }
 
 .tile-headerv1 {
-  @include type-style('heading-04');
+  @include type-style('heading-02');
 }
 
 .tile-body {
@@ -141,13 +151,14 @@
   margin: 15px
 }
 .experience-header {
-  @include type-style('heading-05');
+  /*@include type-style('heading-05');
   color:  var(--cds-text-primary, #161616);
   margin: 10vh;
   background: transparent;
   justify-content: center;
   align-items: center;
-  justify-items: center;
+  justify-items: center;*/
+  font-size: 30px;font-weight: 400;margin-bottom: 70px;text-transform: capitalize;position: relative;line-height: 44px;
 }
 
 .center {
@@ -156,5 +167,22 @@
 
 
 .cds--tag{
-  font-size: 0.8rem
+  //font-size: 0.8rem
 }
+
+.full-width {
+  width: calc(100% + 1rem);
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  background-color: rgb(237, 81, 81);
+}
+
+.experience-header:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -31px;
+  width: 100px;
+  height: 2px;
+  background: #e45447;
+  }

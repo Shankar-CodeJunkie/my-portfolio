@@ -58,14 +58,14 @@ const state = {
 };
 
 const ContributionGraph = () => {
-    return (
-        <>
-          <LineChart
-			data={state.data}
-			options={state.options}>
-		</LineChart>
-        </>
-    )
+  return (
+    <>
+      <LineChart
+        data={state.data}
+        options={state.options}>
+      </LineChart>
+    </>
+  )
 }
 
 export default ContributionGraph;

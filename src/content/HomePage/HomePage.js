@@ -12,8 +12,15 @@ import developer from './../../images/developer.svg'
 import Timeline from "../../components/Timeline";
 import TimeLine from "../TimeLine/TimeLine";
 import ContributionGraph from '../ContributionGraph/ContributionGraph';
+import AOS from "aos";
+import '../../../node_modules/aos/dist/aos.css';
+import { useEffect } from 'react';
+import Skills from '../Skill/Skill';
 
 const HomePage = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
         <>
           <Grid className="landing-page" fullWidth  className={'landing-page__background'}>
@@ -35,77 +42,16 @@ const HomePage = () => {
             </Column>
 
             <Column lg={6} md={8} sm={4}>
-              <img className={'responsive'} src={developer} alt={'fj'}/>
+              <img data-aos={'fade-left'} data-aos-once="false" data-aos-duration={3000} className={'responsive'} src={developer} alt={'fj'}/>
 
             </Column>
 
-            <Column lg={16} md={8} sm={4} className={'skill-layout'} >
-              <Grid>
-                <Column lg={3} md={8} sm={4}>
-                  <div className={'tile-header'}>
-                    Skills
+            <Column lg={16} md={8} sm={4} >
+               <h1 className='experience-header'>Skills</h1>
+            </Column>
 
-                  </div>
-                </Column>
-                <Column lg={4} md={8} sm={4}>
-                  <Tile className={'skill-tile'}>
-                    <div className={'tile-headerv1'}>
-                      FrontEnd
-                    </div>
-
-                    <hr/>
-
-                    <div className={'tile-body'}>
-                      <Tag type="red" title="Clear Filter"> Javascript </Tag>
-                      <Tag type="red" title="Clear Filter"> Typescript </Tag>
-                      <Tag type="red" title="Clear Filter"> React </Tag>
-                      <Tag type="red" title="Clear Filter"> NextJS </Tag>
-                      <br />
-                      <br />
-                    </div>
-
-                  </Tile>
-
-                </Column>
-                <Column lg={4} md={8} sm={4}>
-                  <Tile className={'skill-tile'}>
-                    <div className={'tile-headerv1'}>
-                      BackEnd
-                    </div>
-                    <hr />
-
-                    <div className={'tile-body'}>
-                      <Tag type="red" title="Clear Filter"> NodeJS </Tag>
-                      <Tag type="red" title="Clear Filter"> ExpressJS </Tag>
-                      <Tag type="red" title="Clear Filter"> MongoDB </Tag>
-                      <br />
-                      <br />
-
-                    </div>
-
-                  </Tile>
-
-                </Column>
-                <Column lg={4} md={8} sm={4}>
-                  <Tile className={'skill-tile'}>
-                    <div className={'tile-headerv1'}>
-                      Cloud / CI-CD
-                    </div>
-                    <hr />
-                    <div className={'tile-body'}>
-
-                      <Tag type="red" title="Clear Filter"> IBM Cloud </Tag>
-                      <Tag type="red" title="Clear Filter"> IBM CodeEngine</Tag>
-                      <Tag type="red" title="Clear Filter"> IBM Cloud Functions </Tag>
-                      <Tag type="red" title="Clear Filter"> Heroku </Tag>
-                      <Tag type="red" title="Clear Filter"> Docker | kubernetes | Tekton | Travis </Tag>
-                    </div>
-
-                  </Tile>
-
-                </Column>
-
-              </Grid>
+            <Column lg={{span:16, offset:1}} md={8} sm={4}>
+              <Skills />
             </Column>
 
 

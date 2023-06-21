@@ -1,0 +1,22 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/theme' as *;
+@use './mixins.scss' as *;
+@use './overrides.scss';
+@use '@carbon/colors';
+@import '@carbon/colors/scss/colors';
+
+
+.skill-tile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 1rem;
+    margin: 1px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: var(--cds-layer, #161616);
+    position: relative;
+}
