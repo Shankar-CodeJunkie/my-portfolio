@@ -20,3 +20,7 @@
     background-color: var(--cds-layer, #161616);
     position: relative;
 }
+
+.skill-header {
+    @include type-style('productive-heading-01');
+}

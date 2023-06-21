@@ -186,3 +186,25 @@
   height: 2px;
   background: #e45447;
   }
+
+.bg-primary-light {
+    --tw-bg-opacity: 1;
+    background-color: rgb(247 248 252 / var(--tw-bg-opacity));
+}
+
+.skill-header {
+  @include type-style('label-02');
+  margin-left: '26px'
+}
+
+.lang-img {
+  //background: #17203d;
+  border-radius: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 3.7rem;
+  height: 70px;
+  justify-content: center;
+  margin-top: 5px;
+  width: 70px;
+  }
