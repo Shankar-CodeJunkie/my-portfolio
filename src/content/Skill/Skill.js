@@ -16,6 +16,7 @@ import ibm_cloud from './icons8-ibm-watson-50.png';
 import redux from './icons8-redux-50.png'
 import travis_ci from './icons8-travis-ci-50.png';
 import { Text } from "@carbon/react/lib/components/Text";
+import './_skill.scss'
 
 const Skills = () => {
     return (

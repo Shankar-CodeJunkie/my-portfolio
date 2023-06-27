@@ -14,13 +14,12 @@ function App() {
   return (
     <Theme theme={appTheme}>
       <AppHeader sendDataToParent={sendDataToParent} />
-      <Content>
+      
         <Router>
           <Routes>
             <Route path={'/'} element={<HomePage />} />
           </Routes>
         </Router>
-      </Content>
     </Theme>
   );
 }

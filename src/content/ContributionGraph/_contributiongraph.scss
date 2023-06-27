@@ -1,0 +1,15 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/theme' as *;
+@use './mixins.scss' as *;
+@use './overrides.scss';
+@use '@carbon/colors';
+@use '@carbon/themes';
+@import '@carbon/colors/scss/colors';
+
+
+.org{
+    @include type-style('label-02');
+
+}
