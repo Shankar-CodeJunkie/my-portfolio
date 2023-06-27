@@ -5,6 +5,7 @@
 @use './mixins.scss' as *;
 @use './overrides.scss';
 @use '@carbon/colors';
+@use '@carbon/themes';
 @import '@carbon/colors/scss/colors';
 
 
@@ -208,3 +209,8 @@
   margin-top: 5px;
   width: 70px;
   }
+
+.skill-container {
+  border-radius: 20px;
+  background-color: colors.$red-50;
+}  

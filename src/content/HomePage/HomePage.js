@@ -16,6 +16,7 @@ import AOS from "aos";
 import '../../../node_modules/aos/dist/aos.css';
 import { useEffect } from 'react';
 import Skills from '../Skill/Skill';
+import Offerings from '../offerings/offering';
 
 const HomePage = () => {
   useEffect(() => {
@@ -46,12 +47,20 @@ const HomePage = () => {
 
             </Column>
 
-            <Column lg={16} md={8} sm={4} >
+            <Column lg={16} md={8} sm={4} style={{paddingTop: '50px'}}>
                <h1 className='experience-header'>Skills</h1>
             </Column>
 
-            <Column lg={{span:16, offset:1}} md={8} sm={4}>
+            <Column lg={{span:16, offset:1}} md={8} sm={4} style={{paddingTop: '25px'}}>
               <Skills />
+            </Column>
+
+            <Column lg={16} md={8} sm={4} style={{paddingTop: '50px'}}>
+              <h1 className={'experience-header'}>My Offerings</h1>
+            </Column>
+
+            <Column lg={{span:16, offset:1}} md={8} sm={4}>
+              <Offerings />
             </Column>
 
 
@@ -91,7 +100,9 @@ const HomePage = () => {
 
             </Column>
 
-            <Column lg={16} md={8} sm={4} className={'experience-layout'}>
+            {
+              /**
+               * <Column lg={16} md={8} sm={4} className={'experience-layout'}>
               <Grid>
                 <Column lg={3} md={8} sm={4}>
                 <div className={'experience-header'}>
@@ -104,8 +115,15 @@ const HomePage = () => {
                 </Column>
               </Grid>
             </Column>
+               */
+            }
+            <Column lg={16} md={8} sm={4}>
+              <h1 className={'experience-header'}>OpenSource Contributions</h1>
+            </Column>
 
-
+            <Column lg={{span:16, offset:1}} md={8} sm={4}>
+              <ContributionGraph />
+            </Column>
 
           </Grid>
         </>

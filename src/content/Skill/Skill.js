@@ -22,7 +22,7 @@ const Skills = () => {
         <>
             <Grid >
                 <Column lg={5} md={8} sm={4} >
-                    <Tile >
+                    <Tile className={'skill-container'} >
                         <div className={'tile-headerv1'}>
                             FrontEnd
                         </div>
@@ -60,7 +60,7 @@ const Skills = () => {
 
 
                 <Column lg={5} md={8} sm={4}>
-                    <Tile >
+                    <Tile className={'skill-container'} >
                         <div className={'tile-headerv1'}>
                             BackEnd
                         </div>
@@ -91,7 +91,7 @@ const Skills = () => {
                     </Tile></Column>
 
                 <Column lg={5} md={8} sm={4}>
-                    <Tile className={'skill-tile'}>
+                    <Tile className={'skill-container'}>
                         <div className={'tile-headerv1'}>
                             Cloud / CI-CD
                         </div>
