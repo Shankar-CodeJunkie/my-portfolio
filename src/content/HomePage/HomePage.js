@@ -4,7 +4,7 @@ import {
   Tile, Tag,
 } from '@carbon/react';
 import { InfoSection, InfoCard } from '../../components/Info';
-import { Globe, Application, PersonFavorite, Enterprise } from '@carbon/react/icons';
+import { Globe, Application, PersonFavorite, Enterprise, LogoLinkedin, LogoGithub, Email } from '@carbon/react/icons';
 import images2 from './../../images/images2.png'
 import { CardHeader } from "@carbon/ibm-products/lib/components/Card";
 import { ListItem, UnorderedList } from "@carbon/ibm-security";
@@ -38,6 +38,18 @@ const HomePage = () => {
           for backend. I also like to contribute to open source development and active contributor to
           many open source development projects.
         </Tile>
+
+        <Grid>
+        <Column lg={{span:2, start:2}} md={{span:2, start:1}} sm={1}>
+        <LogoLinkedin style={{margin: '3vh'}} size={36} />
+        </Column>
+        <Column lg={2} md={2} sm={1}>
+        <LogoGithub style={{margin: '3vh'}} size={36} />
+        </Column>
+        <Column lg={2} md={2} sm={1}>
+        <Email style={{margin: '3vh'}} size={36} />
+        </Column>
+        </Grid>
 
       </Column>
 

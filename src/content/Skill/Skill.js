@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Row, Column, Tile, Grid, Tag, Layer, RadioTile, TileGroup } from "@carbon/react";
 import AOS from "aos";
 import '../../../node_modules/aos/dist/aos.css';
@@ -16,19 +16,23 @@ import ibm_cloud from './icons8-ibm-watson-50.png';
 import redux from './icons8-redux-50.png'
 import travis_ci from './icons8-travis-ci-50.png';
 import { Text } from "@carbon/react/lib/components/Text";
-import './_skill.scss'
+import './_skill.scss';
+import '../../../node_modules/aos/dist/aos.css';
 
 const Skills = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <>
             <Grid >
                 <Column lg={5} md={8} sm={4} >
-                    <Tile className={'skill-container'} >
+                    <Tile className={'skill-container'} data-aos={'fade-right'} data-aos-once="false" data-aos-duration={3000} >
                         <div className={'tile-headerv1'}>
                             FrontEnd
                         </div>
                         <hr />
-                        <div className={'tile-body'}>
+                        <div className={'tile-body'}  >
                             <Grid>
                                 <Column lg={{ span: 1 }} md={2} sm={2}>
                                     <img src={reactpicture} alt={'javascript'} />
@@ -61,13 +65,13 @@ const Skills = () => {
 
 
                 <Column lg={5} md={8} sm={4}>
-                    <Tile className={'skill-container'} >
+                    <Tile className={'skill-container'} data-aos={'fade-right'} data-aos-once="false" data-aos-duration={3000}>
                         <div className={'tile-headerv1'}>
                             BackEnd
                         </div>
                         <hr />
 
-                        <div className={'tile-body'}>
+                        <div className={'tile-body'} >
                             <Grid>
                                 <Column lg={1} md={2} sm={2}>
                                     <img src={expressjs} alt={'express-js'} onHover={'expressjs'} height={'50px'} width={'50px'} />
@@ -91,8 +95,8 @@ const Skills = () => {
 
                     </Tile></Column>
 
-                <Column lg={5} md={8} sm={4}>
-                    <Tile className={'skill-container'}>
+                <Column lg={5} md={8} sm={4} >
+                    <Tile className={'skill-container'} data-aos={'fade-right'} data-aos-once="false" data-aos-duration={3000}>
                         <div className={'tile-headerv1'}>
                             Cloud / CI-CD
                         </div>

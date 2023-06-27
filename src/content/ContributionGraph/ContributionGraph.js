@@ -72,15 +72,17 @@ const ContributionGraph = () => {
           <div className='org'>
             <Grid>
               <Column lg={16} md={8} sm={4}>
-              <Tag type={'outline'} size={'md'}>carbon-design-system</Tag>
+              <Tag type={'outline'} size={'md'}>IBM/carbon-design-system</Tag>
               </Column>
               <Column lg={16} md={8} sm={4}>
-              <Tag type={'outline'} size={'md'} >VSCode</Tag>
+              <Tag type={'outline'} size={'md'} >Microsoft/VSCode</Tag>
               </Column>
               <Column lg={16} md={8} sm={4}>
-              <Tag type={'outline'} size={'md'} >NextJS</Tag>
+              <Tag type={'outline'} size={'md'} >vercel/next.js</Tag>
               </Column>
-              <br/>
+              <Column lg={16} md={8} sm={4}>
+              <Tag type={'outline'} size={'md'} >IBM/VSCode-Cloudant-Explorer</Tag>
+              </Column>
               <br/>
               <br/>
               <br/>
